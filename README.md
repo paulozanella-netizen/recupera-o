@@ -1,2 +1,2 @@
-​🌿​ agro forte futuro suntentavel enquilibrio entre produçao e meio ambiente
+​🌿 Agro Forte, Futuro Sustentável: Equilíbrio entre Produção e Meio Ambiente
 ​​🚜​ ​obegetivo do jogo:Uma sugestão seria o "AgroEquilíbrio 2050": um simulador de estratégia onde o jogador assume o papel de um gestor rural do futuro. O objetivo é alimentar uma população crescente usando tecnologias como agricultura de precisão e bioinsumos, enquanto monitora indicadores de saúde do solo, pegada de carbono e biodiversidade. Se os índices ambientais caírem, a produção sofre a longo prazo; se a produção parar, faltam recursos para investir em sustentabilidade.
