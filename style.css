@@ -1,0 +1,201 @@
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --primary-color: #1b5e20; /* Verde Agro */
+    --accent-color: #0d47a1; /* Azul Tecnologia */
+    --text-color: #333333;
+    --agua-color: #2196f3;
+    --solo-color: #4caf50;
+    --capital-color: #ffb300;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.game-container {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cabeçalho */
+.game-header {
+    background: linear-gradient(135deg, var(--primary-color), #2e7d32);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.game-header h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Painel de Recursos */
+.resources-panel {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.resource-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.resource-item label {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    height: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-fill.agua { background-color: var(--agua-color); }
+.progress-fill.solo { background-color: var(--solo-color); }
+.progress-fill.capital { background-color: var(--capital-color); }
+
+.resource-item span {
+    font-size: 0.85rem;
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+/* Corpo Principal */
+.game-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.scenario-card, .oracle-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.scenario-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+#scenario-climate {
+    color: #c62828;
+    margin-bottom: 15px;
+}
+
+.image-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#scenario-desc {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Oráculo e Perguntas */
+.oracle-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.question-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-option {
+    background-color: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-option:hover {
+    background-color: #e8f5e9;
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsividade Básica */
+@media(max-width: 600px) {
+    body { padding: 10px; }
+    .game-header h1 { font-size: 1.6rem; }
+    .image-container { height: 180px; }
+}
